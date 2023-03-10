@@ -10,17 +10,17 @@ N=length(t);
 % lorentzienne
 f0=(1+(t+1).^2).^(-1);
 
-% signal bruité (bruit gaussien)
+% signal bruitÃ© (bruit gaussien)
 f=f0+0.05*randn(1,N);
 
-% intervalle fréquentiel
+% intervalle frÃ©quentiel
 nu_e=1/Te;
 nu=linspace(-nu_e/2,nu_e/2,N);
 
-% transformée de Fourier (initialisation)
+% transformÃ©e de Fourier (initialisation)
 tf=zeros(1,length(nu));
-% calcul de la transformée de Fourier (utiliser commande trapz)
-for k=1:N % pour chaque fréquence
+% calcul de la transformÃ©e de Fourier (utiliser commande trapz)
+for k=1:N % pour chaque frÃ©quence
 tf(k)=trapz(t,f.*exp(-2*i*pi*(nu(k))*t));
 end
 tff=porte(nu/5).*tf;
