@@ -31,18 +31,18 @@ end
 
 h=Te*conv(f,g,'same');
 
-% intervalle fréquentiel
+% intervalle frÃ©quentiel
 nu_e=1/Te;
 
 nu=linspace(-nu_e/2,nu_e/2,N);
 
-% transformée de Fourier (initialisation)
+% transformÃ©e de Fourier (initialisation)
 tfF=zeros(1,length(nu));
 
-% transformée de Fourier (initialisation)
+% transformÃ©e de Fourier (initialisation)
 tfG=zeros(1,length(nu));
 
-for k=1:N % pour chaque fréquence
+for k=1:N % pour chaque frÃ©quence
 tfF(k)=trapz(t,f.*exp(-2*i*pi*(nu(k))*t));
 tfG(k)=trapz(t,g.*exp(-2*i*pi*(nu(k))*t));
 end
