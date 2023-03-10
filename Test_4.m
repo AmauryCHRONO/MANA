@@ -1,5 +1,5 @@
 clear variables;  % efface les variables 
-close all;        % ferme toutes les fenêtres 
+close all;        % ferme toutes les fenÃªtres 
 clc;              % efface le contenu de la zone de commande
 
 x=0;
