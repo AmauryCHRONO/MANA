@@ -14,14 +14,14 @@ subplot(121);hold on;
 plot(t,f,'k','linewidth',2);
 grid on;axis([0,2,0,1.2]);
 
-% période et pulsation
+% pÃ©riode et pulsation
 T=2;
 omega=(2*pi)/T;
 
 % coefficient a0
 a0=(1/T)*trapz(t,f);
 
-% enrgie totale du signal périodique (initialisation)
+% enrgie totale du signal pÃ©riodique (initialisation)
 energie_tot=(1/T)*trapz(t,f.^2);
 
 % nombre d'harmoniques prises en compte
@@ -30,16 +30,16 @@ N=100;
 % signal reconstruit (initialisation)
 f_rec=a0;
 
-% énergie du signal reconstruit (initialisation)
+% Ã©nergie du signal reconstruit (initialisation)
 energie_rec=(a0)^2;
 
-% fréquences des harmoniques (initialisation)
+% frÃ©quences des harmoniques (initialisation)
 freqn_array=zeros(1,N);
 
 % amplitude des harmoniques (initialisation)
 An_array=zeros(1,N);
 
-% calcul du signal reconstruit et de son énergie
+% calcul du signal reconstruit et de son Ã©nergie
 for n=1:N
 an=(2/T).*trapz(t,f.*cos(n*omega*t));
 bn=(2/T).*trapz(t,f.*sin(n*omega*t));
@@ -55,7 +55,7 @@ xlabel('$t$','interpreter','latex','FontSize',12);
 lg=legend('$f(t)$','S\''erie de Fourier');
 set(lg,'interpreter','latex','FontSize',12);
 
-% erreur relative sur le calcul d'énergie
+% erreur relative sur le calcul d'Ã©nergie
 erreur=(abs(energie_tot-energie_rec))/energie_tot
 
 % affichage du spectre
