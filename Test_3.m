@@ -1,5 +1,5 @@
 clear variables;  % efface les variables 
-close all;        % ferme toutes les fenêtres 
+close all;        % ferme toutes les fenÃªtres 
 clc;              % efface le contenu de la zone de commande  
   
 x=0:0.1:2*pi; 
@@ -37,6 +37,6 @@ legend('sin(x)','sin(2x)');
 
 figure(2); 
 hold on; 
-x=0:0.01:2*pi;   % on a changé la valeur du pas 
+x=0:0.01:2*pi;   % on a changÃ© la valeur du pas 
 z=sin(x).*sin(2*x);  % on remarquera le .* 
 plot(x,z,'color',[1,0,1],'linewidth',3);
