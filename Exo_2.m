@@ -16,15 +16,15 @@ f=3.5*triangle(t/3)-1.5.*triangle(t);
 %exp(-pi*t.^2).*cos(4*pi*t);
 plot(t,f,'k'); % affichage (en noir)
 
-% intervalle fréquentiel
+% intervalle frÃ©quentiel
 nu_e=1/Te;
 nu=linspace(-nu_e/2,nu_e/2,N);
 
-% transformée de Fourier (initialisation)
+% transformÃ©e de Fourier (initialisation)
 tf=zeros(1,length(nu));
 
-% calcul de la transformée de Fourier (utiliser commande trapz)
-for k=1:N % pour chaque fréquence
+% calcul de la transformÃ©e de Fourier (utiliser commande trapz)
+for k=1:N % pour chaque frÃ©quence
 tf(k)=trapz(t,f.*exp(-2*i*pi*(nu(k))*t));
 end
 
